@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Intro Call | Advisor Automations Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1A4BA0;--blue:#2D7DD2;--soft:#EEF4FF;--ink:#0E1B33;--muted:#5A6B85;--border:#D8E4F5}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--soft);color:var(--ink);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:56px 48px;max-width:520px;text-align:center;box-shadow:0 18px 50px rgba(26,75,160,.08)}
+h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:30px;letter-spacing:-.5px;margin-bottom:14px}
+p{color:var(--muted);font-size:16.5px;line-height:1.6;margin-bottom:30px}
+a.btn{display:inline-block;background:var(--navy);color:#fff;border:2px solid var(--navy);font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;padding:14px 30px;border-radius:8px;transition:all .2s;text-decoration:none}
+a.btn:hover{background:#fff;color:var(--navy)}
+a.back{display:block;margin-top:22px;color:var(--muted);font-size:14px;text-decoration:none}
+a.back:hover{color:var(--navy)}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Let's talk.</h1>
+  <p>Our online scheduler is being set up. In the meantime, send us a note and we will get right back to you to find a time.</p>
+  <a class="btn" href="mailto:{{ email }}?subject=Intro%20Call%20Request">Email us to book</a>
+  <a class="back" href="/">&larr; Back to site</a>
+</div>
+</body>
+</html>
