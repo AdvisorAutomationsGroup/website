@@ -1,9 +1,10 @@
 import os
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Set this in Render's environment variables once you have the GHL calendar link.
+# Set this in Render's environment variables.
+# Use the GHL calendar PERMANENT LINK (the widget/booking URL), it goes inside the iframe.
 CALENDAR_URL = os.environ.get("CALENDAR_URL", "")
 CONTACT_EMAIL = "info@advisorautomationsgroup.com"
 
@@ -15,11 +16,10 @@ def index():
 
 @app.route("/book")
 def book():
-    """Every Book an Intro Call button routes here.
-    If the GHL calendar link is set, send them straight to it.
-    If not, fall back to a simple contact page so no click is ever wasted."""
+    """Booking page with the GHL calendar embedded in an iframe.
+    If the calendar link is not set yet, show the email fallback instead."""
     if CALENDAR_URL:
-        return redirect(CALENDAR_URL, code=302)
+        return render_template("book.html", calendar_url=CALENDAR_URL)
     return render_template("book_fallback.html", email=CONTACT_EMAIL)
 
 
