@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Intro Call | Advisor Automations Group</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1A4BA0;--blue:#2D7DD2;--soft:#EEF4FF;--ink:#0E1B33;--muted:#5A6B85;--border:#D8E4F5}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--soft);color:var(--ink);min-height:100vh}
+nav{background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);box-shadow:0 1px 12px rgba(14,27,51,.05)}
+.nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:80px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.logo .mark{font-family:'Archivo',sans-serif;font-weight:800;font-size:26px;color:var(--navy);letter-spacing:.5px}
+.logo .sub{font-size:7.5px;font-weight:600;color:var(--blue);letter-spacing:2.4px;margin-top:4px;border-top:2px solid var(--blue);padding-top:4px}
+a.back{font-size:15px;font-weight:600;color:var(--navy);text-decoration:none}
+a.back:hover{color:var(--blue)}
+.wrap{max-width:900px;margin:0 auto;padding:56px 24px 80px;text-align:center}
+h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(28px,4vw,40px);letter-spacing:-.6px;margin-bottom:12px}
+.wrap>p{color:var(--muted);font-size:17px;margin-bottom:36px}
+.cal-card{background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:0 18px 50px rgba(26,75,160,.08);overflow:hidden}
+iframe{width:100%;border:none;min-height:760px;display:block}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo" aria-label="Advisor Automations Group">
+      <span class="mark">AAG</span>
+      <span class="sub">ADVISOR AUTOMATIONS GROUP</span>
+    </a>
+    <a class="back" href="/">&larr; Back to site</a>
+  </div>
+</nav>
+<div class="wrap">
+  <h1>Book an Intro Call</h1>
+  <p>Pick a time that works for you. We will walk through your practice and show you exactly what we would build.</p>
+  <div class="cal-card">
+    <iframe src="{{ calendar_url }}" scrolling="no" id="ghl-calendar" title="Booking calendar"></iframe>
+  </div>
+</div>
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+</body>
+</html>
